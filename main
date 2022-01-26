@@ -1,0 +1,7 @@
+f=@ (x) x^3-1;
+a=0.5;
+b=1.5;
+tol=0.00000001;
+
+k=regulaf(f,a,b,tol);
+fprintf('la raiz es %d\n',k);
