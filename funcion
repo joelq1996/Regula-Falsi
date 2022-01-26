@@ -1,0 +1,20 @@
+function y= regulaf(f,a,b,tol)
+%{
+Joel Quintuna
+f: función a evaluar
+a y b: valores del intervalo en el que se evaluará si existe una raíz
+tol: tolerancia máxima en la aproximación
+y: valor aproximado de la raíz
+iter: numero de iteraciones realizadas
+%}
+g=f;
+x0=a;
+while(1)
+    xn=b-((b-x0)/(g(b)-g(x0)))*g(b);
+    if (abs(f(xn)))<tol
+        break;
+    end
+    x0=xn;
+end
+y=xn;
+end
